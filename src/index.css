@@ -1,68 +1,69 @@
-:root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
 
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
 
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
-}
-a:hover {
-  color: #535bf2;
-}
 
-body {
-  margin: 0;
-  display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
+@layer base{
+    :root{
+        --PrimaryColor:hsl(199,100%,33%);
+        --SecondaryColor:hsl(187,85%,43%);
+        --GradientColor:linear-gradient(to right,hsl(187,85%,43%),hsl(199,100%,33%));
+        --WhiteColor:hsl(0,0%,100%);
+        --BlackColor:hsl(201,33%,16%);
+        --TextColor:hsl(240,4%,36%);
+        --WhiteColorDeam:hsl(0,0%,93%);
+        --GrayText:rgb(190,190,190);
+        --InputColor:rgb(239,239,239);
+        --BodyColor:rgb(240,240,246);
+        --CardBG:rgb(225,225,235);
+      }
 }
 
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
+@layer components{
+    .btn {
+        @apply px-[1.5rem] py-[.6rem] bg-gradient-to-r from-[hsl(187,85%,43%)] to-[hsl(199,100%,33%)] rounded-[3rem] hover:bg-gradient-to-r hover:from-[var(--SecondaryColor)] hover:to-[var(--SecondaryColor)] border-none outline-none cursor-pointer;
+      }
+      
+    .btn link{
+        @apply text-[var(--WhiteColor)] font-medium;
+      }
+    
+    .icon{
+       @apply text-[2rem] cursor-pointer;
+      } 
 }
 
-button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
-  cursor: pointer;
-  transition: border-color 0.25s;
-}
-button:hover {
-  border-color: #646cff;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
-}
-
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
   }
-  a:hover {
-    color: #747bff;
+
+ body{
+    background: var(--BodyColor);
   }
-  button {
-    background-color: #f9f9f9;
-  }
+
+ input{
+    font-size: 100%;
+ }
+
+img,video{
+  width: 100%;  
+  height: auto;
 }
+
+li{
+    list-style: none;
+  }
+
+a{
+    text-decoration: none;
+}  
+section{
+    padding: 4rem 0 2rem;
+}
+
