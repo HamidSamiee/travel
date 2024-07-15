@@ -10,12 +10,12 @@ function App() {
   
 
   return (
-    <>
-     <Navbar />
+    <div className='container md:max-w-screen-xl'>
+      <Navbar />
       <Home />
-     {/*<Main />
-     <Footer />*/}
-    </> 
+      <Main />
+     {/* <Footer />*/}
+    </div> 
   )
 }
 

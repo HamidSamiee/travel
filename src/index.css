@@ -33,7 +33,13 @@
     
     .icon{
        @apply text-[2rem] cursor-pointer;
+      }
+      .tooltip{
+        @apply invisible absolute top-10  ;
       } 
+      .has-tooltip:hover .tooltip {
+        @apply visible z-50 ;
+      }
 }
 
 *{

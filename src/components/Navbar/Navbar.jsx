@@ -11,9 +11,9 @@ const Navbar = () => {
 
   return (
     
-    <section className="">
-        <header className="fixed top-0 flex items-center justify-center bg-[var(--WhiteColorDeam)] w-full p-4 z-10">
-            <div className="shadow-input-header p-4 flex items-center justify-between w-full">
+    <section className=" ">
+        <header className="fixed top-0 left-1/2 -translate-x-1/2  bg-[var(--WhiteColorDeam)] w-full md:max-w-screen-xl p-4 z-10">
+            <div className=" shadow-input-header p-4 flex items-center justify-between w-full">
             {/* logo header */}
                 <NavLink to="#" className='flex items-center justify-center text-[var(--BlackColor)] font-semibold cursor-pointer '>
                     <MdOutlineTravelExplore className='icon text-[25px] text-[var(--PrimaryColor)] translate-y-.5' /><h1 className="">Travel.</h1>
