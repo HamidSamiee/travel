@@ -49,6 +49,9 @@
     font-family: "Poppins", sans-serif;
   }
 
+html{
+    scroll-behavior: smooth;
+}
  body{
     background: var(--BodyColor);
   }
@@ -69,7 +72,4 @@ li{
 a{
     text-decoration: none;
 }  
-section{
-    padding: 4rem 0 2rem;
-}
 

@@ -1,21 +1,23 @@
 
+import { Route, Routes } from 'react-router-dom'
 import './App.css'
-import Footer from './components/Footer/Footer'
-import Home from './components/Home/Home'
-import Main from './components/Main/Main'
-import Navbar from './components/Navbar/Navbar'
+import Layout from './components/Layout/Layout'
+import routes from './routes'
 
 
 function App() {
   
 
   return (
-    <div className='container md:max-w-screen-xl'>
-      <Navbar />
-      <Home />
-      <Main />
-     {/* <Footer />*/}
-    </div> 
+      <Layout>
+            <Routes>
+              {
+                routes.map((route)=>{
+                   return <Route key={route.id} path={route.path} element={route.element} />
+                })
+              }  
+            </Routes>
+      </Layout> 
   )
 }
 
